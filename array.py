@@ -2,6 +2,16 @@ scores = input("Enter scores separated by spaces: ")
 
 scores = [float(score) for score in scores.split()]
 
-print("Scores:", scores)
-print("Total:", sum(scores))
-print("Average:", sum(scores) / len(scores))
+if len(scores) == 0:
+    print("Please enter at least one score.")
+else:
+    total = sum(scores)
+    average = total / len(scores)
+    maximum=max(scores)
+    minimum=min(scores)
+
+    print("Scores:", scores)
+    print("Sum:", total)
+    print("Average:", average)
+    print("maximum score:",maximum)
+    print("minimum score:",minimum)
